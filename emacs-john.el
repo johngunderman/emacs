@@ -65,3 +65,8 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
+
+
+;; enable the windmove default keybindings.
+;; shift + {right, left, etc} moves window focus.
+(windmove-default-keybindings)
