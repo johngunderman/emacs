@@ -1,0 +1,434 @@
+
+cedet-autogen.el,831
+(defun cedet-autogen-noninteractive ()cedet-autogen-noninteractive42,1216
+(defadvice make-autoload (before cedet-make-autoload activate)make-autoload66,1960
+(defconst cedet-autogen-headercedet-autogen-header104,3362
+(defconst cedet-autogen-tagfile ".cedet-lisp"cedet-autogen-tagfile108,3479
+(defun cedet-autogen-kill-xemacs-autoloads-feature ()cedet-autogen-kill-xemacs-autoloads-feature111,3595
+(defun cedet-autogen-update-header ()cedet-autogen-update-header122,3990
+(defun cedet-autogen-subdirs (root-dir)cedet-autogen-subdirs148,4920
+(defun cedet-autogen-ensure-default-file (file)cedet-autogen-ensure-default-file163,5617
+(defun cedet-update-autoloads (loaddefs &optional directory &rest directories)cedet-update-autoloads190,6693
+(defun cedet-batch-update-autoloads ()cedet-batch-update-autoloads211,7735
+
+cedet-compat.el,304
+(defun compare-strings (str1 start1 end1 str2 start2 end2 &optional ignore-case)compare-strings42,1493
+(defun subst-char-in-string (fromchar tochar string &optional inplace)subst-char-in-string89,3138
+(defun cedet-split-string-1 (string &optional separators omit-nulls)cedet-split-string-1103,3581
+
+cedet-cscope.el,566
+(defvar cedet-cscope-min-version "16.0"cedet-cscope-min-version29,1026
+(defcustom cedet-cscope-command "cscope"cedet-cscope-command33,1127
+(defun cedet-cscope-search (searchtext texttype type scope)cedet-cscope-search40,1271
+(defun cedet-cscope-call (flags)cedet-cscope-call77,2449
+(defun cedet-cscope-expand-filename (filename)cedet-cscope-expand-filename93,2791
+(defun cedet-cscope-support-for-directory (&optional dir)cedet-cscope-support-for-directory115,3494
+(defun cedet-cscope-version-check (&optional noerror)cedet-cscope-version-check129,3994
+
+cedet-edebug.el,425
+(defvar cedet-edebug-prin1-extensionscedet-edebug-prin1-extensions37,1329
+(defun cedet-edebug-prin1-recurse (object)cedet-edebug-prin1-recurse42,1487
+(defun cedet-edebug-rebuild-prin1 ()cedet-edebug-rebuild-prin146,1673
+(defun cedet-edebug-prin1-to-string (object &optional noescape)cedet-edebug-prin1-to-string67,2387
+(defun cedet-edebug-add-print-override (testfcn printfcn)cedet-edebug-add-print-override79,2850
+
+cedet.el,299
+(defconst cedet-version "1.0pre6"cedet-version82,2258
+(defconst cedet-emacs-min-version "21.1"cedet-emacs-min-version85,2324
+(defconst cedet-xemacs-min-version "21.4"cedet-xemacs-min-version87,2419
+(defconst cedet-packagescedet-packages90,2513
+(defun cedet-version ()cedet-version168,5220
+
+cedet-files.el,535
+(defvar cedet-dir-sep-char (if (boundp 'directory-sep-char)cedet-dir-sep-char29,1088
+(defun cedet-directory-name-to-file-name (referencedir &optional testmode)cedet-directory-name-to-file-name36,1309
+(defun cedet-file-name-to-directory-name (referencefile &optional testmode)cedet-file-name-to-directory-name75,2979
+(defvar cedet-files-utest-listcedet-files-utest-list105,4037
+(defun cedet-files-utest ()cedet-files-utest118,4536
+(defun replace-regexp-in-string (regexp rep string &optionalreplace-regexp-in-string151,5255
+
+cedet-global.el,723
+(defvar cedet-global-min-version "5.0"cedet-global-min-version29,1057
+(defcustom cedet-global-command "global"cedet-global-command33,1157
+(defun cedet-gnu-global-search (searchtext texttype type scope)cedet-gnu-global-search40,1305
+(defun cedet-gnu-global-call (flags)cedet-gnu-global-call70,2268
+(defun cedet-gnu-global-expand-filename (filename)cedet-gnu-global-expand-filename85,2617
+(defun cedet-gnu-global-show-root ()cedet-gnu-global-show-root105,3239
+(defun cedet-gnu-global-root (&optional dir)cedet-gnu-global-root111,3415
+(defun cedet-gnu-global-version-check (&optional noerror)cedet-gnu-global-version-check125,3888
+(defun cedet-gnu-global-scan-hits (buffer)cedet-gnu-global-scan-hits148,4708
+
+cedet-idutils.el,748
+(defvar cedet-idutils-min-version "4.0"cedet-idutils-min-version30,1065
+(defcustom cedet-idutils-file-command "fnid"cedet-idutils-file-command34,1164
+(defcustom cedet-idutils-token-command "lid"cedet-idutils-token-command40,1329
+(defun cedet-idutils-search (searchtext texttype type scope)cedet-idutils-search46,1489
+(defun cedet-idutils-fnid-call (flags)cedet-idutils-fnid-call79,2834
+(defun cedet-idutils-lid-call (flags)cedet-idutils-lid-call94,3229
+(defun cedet-idutils-expand-filename (filename)cedet-idutils-expand-filename112,3655
+(defun cedet-idutils-support-for-directory (&optional dir)cedet-idutils-support-for-directory132,4319
+(defun cedet-idutils-version-check (&optional noerror)cedet-idutils-version-check146,4803
+
+cedet-loaddefs.el,303
+(defvar cedet-cscope-command "cscope" "\cedet-cscope-command35,1229
+(defvar cedet-global-command "global" "\cedet-global-command94,3312
+(defvar cedet-idutils-file-command "fnid" "\cedet-idutils-file-command144,5046
+(defvar cedet-idutils-token-command "lid" "\cedet-idutils-token-command149,5226
+
+cedet-load.el,0
+
+cedet-utests.el,1416
+(defvar cedet-utest-test-alistcedet-utest-test-alist31,1159
+(defun cedet-utest (&optional exit-on-error)cedet-utest111,3321
+(defun cedet-utest-noninteractive ()cedet-utest-noninteractive144,4168
+(defun cedet-utest-batch ()cedet-utest-batch151,4339
+(defvar cedet-utest-frame nilcedet-utest-frame167,4777
+(defvar cedet-utest-buffer nilcedet-utest-buffer169,4855
+(defvar cedet-utest-frame-parameterscedet-utest-frame-parameters171,4934
+(defvar cedet-utest-last-log-item nilcedet-utest-last-log-item178,5114
+(defvar cedet-utest-log-timer nilcedet-utest-log-timer181,5202
+(defun cedet-utest-log-setup (&optional title)cedet-utest-log-setup184,5279
+(defun cedet-utest-elapsed-time (start end)cedet-utest-elapsed-time213,6396
+(defun cedet-utest-log-shutdown (title &optional errorcondition)cedet-utest-log-shutdown220,6701
+(defun cedet-utest-log-shutdown-msg (title startime endtime)cedet-utest-log-shutdown-msg230,7056
+(defun cedet-utest-show-log-end ()cedet-utest-show-log-end251,7741
+(defun cedet-utest-post-command-hook ()cedet-utest-post-command-hook266,8140
+(defun cedet-utest-add-log-item-start (item)cedet-utest-add-log-item-start278,8498
+(defun cedet-utest-add-log-item-done (&optional notes err precr)cedet-utest-add-log-item-done297,9091
+(defun cedet-utest-log-start (testname)cedet-utest-log-start326,10048
+(defun cedet-utest-log(format &rest args)cedet-utest-log339,10458
+
+data-debug.el,4719
+(defun data-debug-insert-property-list (proplist prefix &optional parent)data-debug-insert-property-list57,1770
+(defun data-debug-insert-overlay-props (overlay prefix)data-debug-insert-overlay-props71,2203
+(defun data-debug-insert-overlay-from-point (point)data-debug-insert-overlay-from-point81,2550
+(defun data-debug-insert-overlay-button (overlay prefix prebuttontext)data-debug-insert-overlay-button96,2973
+(defun data-debug-insert-overlay-list (overlaylist prefix)data-debug-insert-overlay-list119,3779
+(defun data-debug-insert-overlay-list-from-point (point)data-debug-insert-overlay-list-from-point128,4090
+(defun data-debug-insert-overlay-list-button (overlaylistdata-debug-insert-overlay-list-button143,4528
+(defun data-debug-insert-buffer-props (buffer prefix)data-debug-insert-buffer-props168,5416
+(defun data-debug-insert-buffer-from-point (point)data-debug-insert-buffer-from-point185,5988
+(defun data-debug-insert-buffer-button (buffer prefix prebuttontext)data-debug-insert-buffer-button200,6405
+(defun data-debug-insert-buffer-list (bufferlist prefix)data-debug-insert-buffer-list223,7203
+(defun data-debug-insert-buffer-list-from-point (point)data-debug-insert-buffer-list-from-point232,7506
+(defun data-debug-insert-buffer-list-button (bufferlistdata-debug-insert-buffer-list-button247,7938
+(defun data-debug-insert-process-props (process prefix)data-debug-insert-process-props272,8820
+(defun data-debug-insert-process-from-point (point)data-debug-insert-process-from-point290,9360
+(defun data-debug-insert-process-button (process prefix prebuttontext)data-debug-insert-process-button305,9783
+(defun data-debug-insert-ring-contents (ring prefix)data-debug-insert-ring-contents329,10653
+(defun data-debug-insert-ring-items-from-point (point)data-debug-insert-ring-items-from-point340,10966
+(defun data-debug-insert-ring-button (ringdata-debug-insert-ring-button355,11380
+(defun data-debug-insert-hash-table (hash-table prefix)data-debug-insert-hash-table399,12692
+(defun data-debug-insert-hash-table-from-point (point)data-debug-insert-hash-table-from-point411,13092
+(defun data-debug-insert-hash-table-button (hash-table prefix prebuttontext)data-debug-insert-hash-table-button425,13510
+(defun data-debug-insert-stuff-list (stufflist prefix)data-debug-insert-stuff-list449,14388
+(defun data-debug-insert-stuff-list-from-point (point)data-debug-insert-stuff-list-from-point463,14797
+(defun data-debug-insert-stuff-list-button (stufflistdata-debug-insert-stuff-list-button478,15219
+(defun data-debug-insert-symbol-from-point (point)data-debug-insert-symbol-from-point510,16263
+(defun data-debug-insert-symbol-button (symbol prefix prebuttontext)data-debug-insert-symbol-button532,16944
+(defun data-debug-insert-string (thing prefix prebuttontext)data-debug-insert-string556,17754
+(defun data-debug-insert-number (thing prefix prebuttontext)data-debug-insert-number572,18364
+(defun data-debug-insert-lambda-expression (thing prefix prebuttontext)data-debug-insert-lambda-expression583,18765
+(defun data-debug-insert-simple-thing (thing prefix prebuttontext face)data-debug-insert-simple-thing594,19190
+(defun data-debug-insert-custom (thingstring prefix prebuttontext face)data-debug-insert-custom609,19643
+(defvar data-debug-thing-alistdata-debug-thing-alist625,20126
+(defun data-debug-insert-thing (thing prefix prebuttontext &optional parent)data-debug-insert-thing689,21855
+(defgroup data-debug nildata-debug714,22706
+(defvar data-debug-mode-syntax-tabledata-debug-mode-syntax-table718,22775
+(defvar data-debug-mapdata-debug-map732,23428
+(defcustom data-debug-mode-hook nildata-debug-mode-hook744,23887
+(defun data-debug-mode ()data-debug-mode750,24013
+(defun data-debug-new-buffer (name)data-debug-new-buffer769,24510
+(defun data-debug-next ()data-debug-next780,24745
+(defun data-debug-prev ()data-debug-prev787,24924
+(defun data-debug-next-expando ()data-debug-next-expando794,25104
+(defun data-debug-prev-expando ()data-debug-prev-expando804,25365
+(defun data-debug-current-line-expanded-p ()data-debug-current-line-expanded-p814,25630
+(defun data-debug-line-expandable-p ()data-debug-line-expandable-p825,25908
+(defun data-debug-expand-current-line ()data-debug-expand-current-line830,26122
+(defun data-debug-contract-current-line ()data-debug-contract-current-line842,26530
+(defun data-debug-expand-or-contract ()data-debug-expand-or-contract869,27316
+(defun data-debug-expand-or-contract-mouse (event)data-debug-expand-or-contract-mouse878,27639
+(defun data-debug-edebug-expr (expr)data-debug-edebug-expr895,28075
+(defun data-debug-eval-expression (expr)data-debug-eval-expression911,28551
+
+ezimage.el,2512
+(defcustom ezimage-use-imagesezimage-use-images43,1542
+(defmacro defezimage (variable imagespec docstring)defezimage63,2077
+(defmacro defezimage (variable imagespec docstring)defezimage82,2679
+(defun ezimage-find-image-on-load-path (image)ezimage-find-image-on-load-path90,2978
+(defun ezimage-convert-emacs21-imagespec-to-xemacs (spec)ezimage-convert-emacs21-imagespec-to-xemacs108,3562
+(defmacro defezimage (variable imagespec docstring)defezimage116,3886
+(defezimage ezimage-directoryezimage-directory135,4565
+(defezimage ezimage-directory-plusezimage-directory-plus139,4682
+(defezimage ezimage-directory-minusezimage-directory-minus143,4829
+(defezimage ezimage-page-plusezimage-page-plus147,4976
+(defezimage ezimage-page-minusezimage-page-minus151,5113
+(defezimage ezimage-pageezimage-page155,5250
+(defezimage ezimage-tagezimage-tag159,5382
+(defezimage ezimage-tag-plusezimage-tag-plus163,5480
+(defezimage ezimage-tag-minusezimage-tag-minus167,5601
+(defezimage ezimage-tag-gtezimage-tag-gt171,5716
+(defezimage ezimage-tag-vezimage-tag-v175,5846
+(defezimage ezimage-tag-typeezimage-tag-type179,5972
+(defezimage ezimage-box-plusezimage-box-plus183,6107
+(defezimage ezimage-box-minusezimage-box-minus187,6217
+(defezimage ezimage-mailezimage-mail191,6328
+(defezimage ezimage-checkoutezimage-checkout195,6429
+(defezimage ezimage-objectezimage-object199,6581
+(defezimage ezimage-object-out-of-dateezimage-object-out-of-date203,6704
+(defezimage ezimage-labelezimage-label207,6872
+(defezimage ezimage-lockezimage-lock211,6982
+(defezimage ezimage-unlockezimage-unlock215,7111
+(defezimage ezimage-keyezimage-key219,7221
+(defezimage ezimage-document-tagezimage-document-tag223,7314
+(defezimage ezimage-document-plusezimage-document-plus227,7448
+(defezimage ezimage-document-minusezimage-document-minus231,7585
+(defezimage ezimage-info-tagezimage-info-tag235,7722
+(defvar ezimage-expand-image-button-alistezimage-expand-image-button-alist239,7856
+(defun ezimage-insert-image-button-maybe (start length &optional string)ezimage-insert-image-button-maybe259,8450
+(defun ezimage-image-over-string (string &optional alist)ezimage-image-over-string278,9399
+(defun ezimage-insert-over-text (image start end &optional string)ezimage-insert-over-text290,9781
+(defun ezimage-image-association-dump ()ezimage-image-association-dump308,10374
+(defun ezimage-image-dump ()ezimage-image-dump332,11192
+(defun ezimage-all-images ()ezimage-all-images354,11922
+
+fame.el,1672
+(defconst fame-valid-levelsfame-valid-levels76,2656
+(defconst fame-valid-level-valuesfame-valid-level-values80,2746
+(defconst fame-default-level-valuesfame-default-level-values84,2852
+(define-widget 'fame-display-choice 'radio-button-choicefame-display-choice88,2982
+(define-widget 'fame-level-widget 'constfame-level-widget99,3395
+(define-widget 'fame-channel-widget 'listfame-channel-widget103,3494
+(defgroup fame nilfame116,4033
+(defcustom fame-temp-message-delay 1fame-temp-message-delay121,4128
+(defsubst fame-temp-message (&rest args)fame-temp-message234,8165
+(defsubst fame-temp-message-nolog (&rest args)fame-temp-message-nolog241,8444
+(defun fame-check-level (level)fame-check-level250,8783
+(defun fame-check-level-value (value)fame-check-level-value258,9043
+(defun fame-check-channel (channel)fame-check-channel266,9327
+(defun fame-check-channel-levels (levels)fame-check-channel-levels274,9586
+(defsubst fame-channel-symbol (channel)fame-channel-symbol287,10080
+(defun fame-channel-levels (channel)fame-channel-levels291,10243
+(defsubst fame-level-display (channel level)fame-level-display300,10566
+(defconst fame-send-functions-alistfame-send-functions-alist308,10821
+(defun fame-send (channel level &rest args)fame-send317,11069
+(defsubst fame-send-debug (channel &rest args)fame-send-debug326,11469
+(defsubst fame-send-info (channel &rest args)fame-send-info332,11679
+(defsubst fame-send-warning (channel &rest args)fame-send-warning338,11896
+(defsubst fame-send-error (channel &rest args)fame-send-error344,12112
+(defmacro define-fame-channel (channel &optional default docstring)define-fame-channel353,12367
+
+inversion.el,2014
+(defvar inversion-version "1.3"inversion-version9,258
+(defvar inversion-incompatible-version "0.1alpha1"inversion-incompatible-version11,325
+(defconst inversion-decodersinversion-decoders77,2526
+(defun inversion-decode-version (version-string)inversion-decode-version102,3545
+(defun inversion-package-version (package)inversion-package-version128,4335
+(defun inversion-package-incompatibility-version (package)inversion-package-incompatibility-version143,4790
+(defun inversion-recode (code)inversion-recode157,5291
+(defun inversion-release-to-number (release-symbol)inversion-release-to-number170,5634
+(defun inversion-= (ver1 ver2)inversion-=177,5876
+(defun inversion-< (ver1 ver2)inversion-<181,5974
+(defun inversion-check-version (version incompatible-versioninversion-check-version215,6757
+(defun inversion-test (package minimum &rest reserved)inversion-test260,8171
+(defun inversion-reverse-test (package oldversion &rest reserved)inversion-reverse-test289,9390
+(defun inversion-require (package version &optional file directoryinversion-require323,10818
+(defun inversion-require-emacs (emacs-ver xemacs-ver)inversion-require-emacs342,11596
+(defconst inversion-find-datainversion-find-data353,11938
+(defun inversion-find-version (package)inversion-find-version358,12107
+(defun inversion-add-to-load-path (package minimuminversion-add-to-load-path389,13401
+(defun inversion-unit-test ()inversion-unit-test435,15385
+(defun inversion-locate-package-files (package directory &optional version)inversion-locate-package-files493,17308
+(defvar inversion-package-common-tails '( ".tar.gz"inversion-package-common-tails509,18023
+(defun inversion-locate-package-files-and-split (package directory &optional version)inversion-locate-package-files-and-split516,18183
+(defun inversion-download-package-ask (err package directory version)inversion-download-package-ask544,19244
+(defun inversion-upgrade-package (package &optional directory)inversion-upgrade-package573,20109
+
+Makefile,823
+top=top9,209
+ede_FILES=Project.ede Makefileede_FILES10,214
+Doc_TEXINFOS=cedet.texiDoc_TEXINFOS12,246
+MAKEINFO=makeinfoMAKEINFO13,270
+misc_AUX=ChangeLogmisc_AUX14,288
+EMACS=emacsEMACS15,307
+LOADPATH= ./LOADPATH16,319
+LOADDEFS=cedet-loaddefs.elLOADDEFS17,332
+LOADDIRS=.LOADDIRS18,359
+init_LISP=cedet-load.elinit_LISP19,370
+EMACS=emacsEMACS20,394
+EMACSFLAGS=-batch --no-site-fileEMACSFLAGS21,406
+setup_LISP=cedet.elsetup_LISP22,439
+common_LISP=cedet-autogen.el cedet-compat.el ezimage.el inversion.el pprint.el sformat.el fame.el working.el cedet-edebug.el mode-local.el cedet-files.el pulse.el data-debug.el cedet-global.el cedet-idutils.el cedet-cscope.elcommon_LISP23,459
+tests_LISP=cedet-utests.eltests_LISP24,685
+VERSION=1.0pre6VERSION25,712
+DISTDIR=$(top)common-$(VERSION)DISTDIR26,728
+
+mode-local.el,4093
+(defun mode-local-define-derived-mode-needed-p ()mode-local-define-derived-mode-needed-p59,2026
+(defun mode-local-map-file-buffers (function &optional predicate buffers)mode-local-map-file-buffers95,3474
+(defun mode-local-map-mode-buffers (function modes)mode-local-map-mode-buffers109,4149
+(defvar mode-local-init-hook nilmode-local-init-hook119,4497
+(defvar mode-local-changed-mode-buffers nilmode-local-changed-mode-buffers123,4634
+(defvar mode-local--init-mode nil)mode-local--init-mode126,4741
+(defsubst mode-local-initialized-p ()mode-local-initialized-p128,4777
+(defun mode-local-post-major-mode-change ()mode-local-post-major-mode-change134,5039
+(defun mode-local-on-major-mode-change ()mode-local-on-major-mode-change149,5641
+(defsubst set-mode-local-parent (mode parent)set-mode-local-parent159,6020
+(defsubst get-mode-local-parent (mode)get-mode-local-parent169,6516
+(defmacro define-child-mode (mode parent &optional docstring)define-child-mode175,6717
+(defun mode-local-use-bindings-p (this-mode desired-mode)mode-local-use-bindings-p182,7004
+(defvar mode-local-symbol-table nilmode-local-symbol-table193,7325
+(defvar mode-local-active-mode nilmode-local-active-mode199,7588
+(defsubst new-mode-local-bindings ()new-mode-local-bindings202,7670
+(defun mode-local-bind (bindings &optional plist mode)mode-local-bind206,7781
+(defsubst mode-local-symbol (symbol &optional mode)mode-local-symbol279,10896
+(defsubst mode-local-symbol-value (symbol &optional mode property)mode-local-symbol-value299,11782
+(defun activate-mode-local-bindings (&optional mode)activate-mode-local-bindings312,12387
+(defun deactivate-mode-local-bindings (&optional mode)deactivate-mode-local-bindings342,13703
+(defmacro with-mode-local (mode &rest body)with-mode-local360,14381
+(defsubst mode-local-value (mode sym)mode-local-value387,15614
+(defmacro setq-mode-local (mode &rest args)setq-mode-local392,15812
+(defmacro defvar-mode-local (mode sym val &optional docstring)defvar-mode-local422,16979
+(defmacro defconst-mode-local (mode sym val &optional docstring)defconst-mode-local432,17322
+(defun make-obsolete-overload (old new)make-obsolete-overload446,17796
+(defsubst overload-obsoleted-by (overload)overload-obsoleted-by452,17999
+(defsubst overload-that-obsolete (overload)overload-that-obsolete457,18179
+(defsubst fetch-overload (overload)fetch-overload462,18381
+(defun mode-local--override (name args body)mode-local--override472,18872
+(defun mode-local--expand-overrides (name args body)mode-local--expand-overrides488,19552
+(defun mode-local--overload-body (name args body)mode-local--overload-body511,20453
+(defmacro define-overloadable-function (name args docstring &rest body)define-overloadable-function521,20848
+(defalias 'define-overload 'define-overloadable-function)define-overload552,22181
+(defsubst function-overload-p (symbol)function-overload-p554,22240
+(defmacro define-mode-local-overridedefine-mode-local-override558,22415
+(defun mode-local-read-function (prompt &optional initial hist default)mode-local-read-function585,23415
+(defun overload-docstring-extension (overload)overload-docstring-extension592,23724
+(defun mode-local-augment-function-help (symbol)mode-local-augment-function-help606,24291
+(defadvice describe-function (around mode-local-help activate)describe-function626,24951
+(defun mode-local-print-binding (symbol)mode-local-print-binding635,25275
+(defun mode-local-print-bindings (table)mode-local-print-bindings648,25672
+(defun mode-local-describe-bindings-2 (buffer-or-mode)mode-local-describe-bindings-2685,26901
+(defun mode-local-describe-bindings-1 (buffer-or-mode &optional interactive-p)mode-local-describe-bindings-1712,27823
+(defun describe-mode-local-bindings (buffer)describe-mode-local-bindings734,28726
+(defun describe-mode-local-bindings-in-mode (mode)describe-mode-local-bindings-in-mode740,28946
+(defconst mode-local-font-lock-keywordsmode-local-font-lock-keywords752,29347
+(defun mode-local-setup-edebug-specs ()mode-local-setup-edebug-specs826,31564
+
+pprint.el,1852
+(defvar pprint-standard-printers nilpprint-standard-printers60,2055
+(defvar pprint-printers nilpprint-printers63,2121
+(defsubst pprint-clear-printers ()pprint-clear-printers68,2249
+(defun pprint-push-printer (printer matcher)pprint-push-printer72,2355
+(defmacro pprint-with-printers (table &rest body)pprint-with-printers78,2620
+(defvar pprint-min-width 20pprint-min-width96,3228
+(defvar pprint-width)pprint-width101,3390
+(defvar pprint-no-break)pprint-no-break102,3412
+(defmacro pprint-no-break-p (&rest motions)pprint-no-break-p104,3438
+(defsubst pprint-maybe-newline-and-indent ()pprint-maybe-newline-and-indent113,3769
+(defsubst pprint-search-printer (table)pprint-search-printer121,4063
+(defsubst pprint-dispatch-printer ()pprint-dispatch-printer129,4344
+(defsubst pprint-sexp-try (room)pprint-sexp-try137,4585
+(defsubst pprint-close-list ()pprint-close-list157,5236
+(defsubst pprint-nil-as-list ()pprint-nil-as-list161,5345
+(defsubst pprint-list ()pprint-list170,5643
+(defsubst pprint-sequence ()pprint-sequence185,6149
+(defun pprint-sexp (&optional pprint-no-break)pprint-sexp192,6367
+(defun pprint-lambda ()pprint-lambda223,7376
+(defun pprint-defun ()pprint-defun233,7616
+(defun pprint-defvar ()pprint-defvar245,7907
+(defun pprint-let ()pprint-let257,8196
+(defun pprint-if ()pprint-if277,8725
+(defun pprint-while ()pprint-while287,8934
+(defun pprint-progn ()pprint-progn295,9097
+(defun pprint-setq ()pprint-setq302,9242
+(defun pprint-cond ()pprint-cond314,9551
+(defun pprint-with ()pprint-with326,9832
+(defun pprint-setup-standard-printers ()pprint-setup-standard-printers338,10180
+(defun pprint-to-string (object &optional width)pprint-to-string413,12158
+(defun pprint (object &optional stream width)pprint440,13241
+(defun pprint-function (function-name)pprint-function451,13761
+
+pulse.el,2027
+(defun  pulse-available-p ()pulse-available-p59,2202
+(defcustom pulse-flag (pulse-available-p)pulse-flag66,2421
+(defface pulse-highlight-start-facepulse-highlight-start-face77,2815
+(defface pulse-highlight-facepulse-highlight-face85,3052
+(defun pulse-int-to-hex (int &optional nb-digits)pulse-int-to-hex118,4093
+(defun pulse-color-values-to-hex (values)pulse-color-values-to-hex131,4774
+(defcustom pulse-iterations 10pulse-iterations143,5273
+(defcustom pulse-delay .03pulse-delay147,5384
+(defun pulse-lighten-highlight ()pulse-lighten-highlight152,5513
+(defun pulse-reset-face (&optional face)pulse-reset-face177,6497
+(defun pulse (&optional face)pulse189,6874
+(defun pulse-test (&optional no-error)pulse-test203,7260
+(defvar pulse-momentary-overlay nilpulse-momentary-overlay252,8728
+(defun pulse-momentary-highlight-overlay (o &optional face)pulse-momentary-highlight-overlay256,8814
+(defun pulse-momentary-unhighlight ()pulse-momentary-unhighlight280,9687
+(defun pulse-momentary-highlight-one-line (point &optional face)pulse-momentary-highlight-one-line305,10541
+(defun pulse-momentary-highlight-region (start end &optional face)pulse-momentary-highlight-region318,10964
+(defvar pulse-command-advice-flag nilpulse-command-advice-flag328,11377
+(defun pulse-toggle-integration-advice (arg)pulse-toggle-integration-advice333,11537
+(defadvice goto-line (after pulse-advice activate)goto-line362,12408
+(defadvice exchange-point-and-mark (after pulse-advice activate)exchange-point-and-mark367,12639
+(defadvice find-tag (after pulse-advice activate)find-tag373,12923
+(defadvice tags-search (after pulse-advice activate)tags-search378,13143
+(defadvice tags-loop-continue (after pulse-advice activate)tags-loop-continue383,13366
+(defadvice pop-tag-mark (after pulse-advice activate)pop-tag-mark388,13596
+(defadvice imenu-default-goto-function (after pulse-advice activate)imenu-default-goto-function393,13820
+(defun pulse-line-hook-function ()pulse-line-hook-function399,14052
+
+sformat.el,696
+(defvar Sformat-default-format 'Sformat-default-format-methodSformat-default-format71,2493
+(defvar Sformat-formatting nilSformat-formatting80,2767
+(defun Sformat-point ()Sformat-point83,2862
+(defun Sformat-column ()Sformat-column88,3018
+(defun Sformat (extensions fmt &rest args)Sformat96,3270
+(defun Sformat-default-format-method (str A1 A2 A1def A2def)Sformat-default-format-method247,8420
+(defun Sformat-string-word-format (str A1 A2 method1 method2)Sformat-string-word-format261,9033
+(defun sformat-just-before-token-regexp (token format)sformat-just-before-token-regexp367,12555
+(defun sformat-just-after-token-regexp (token format)sformat-just-after-token-regexp381,13163
+
+working.el,3250
+(defgroup working nilworking112,3986
+(defcustom working-status-percentage-type 'working-bar-percent-displayworking-status-percentage-type120,4113
+(defcustom working-status-dynamic-type 'working-celeron-displayworking-status-dynamic-type140,4798
+(defcustom working-percentage-step 2working-percentage-step159,5507
+(defvar working-mode-line-message nilworking-mode-line-message174,6043
+(defvar working-use-echo-area-p tworking-use-echo-area-p192,6722
+(defvar working-message nilworking-message197,6850
+(defvar working-donestring nilworking-donestring199,6921
+(defvar working-ref1 nilworking-ref1201,6999
+(defvar working-last-percent 0working-last-percent203,7071
+(defsubst working-noninteractive ()working-noninteractive218,7411
+(defun working-message-echo (&rest args)working-message-echo224,7583
+(defalias 'working-current-message 'fame-current-message)working-current-message230,7817
+(defalias 'working-temp-message 'fame-temp-message)working-temp-message231,7875
+(defun working-message (&rest args)working-message233,7928
+(defmacro working-status-forms (message donestr &rest forms)working-status-forms261,8949
+(defmacro working-status-timeout (timeout message donestr &rest forms)working-status-timeout281,9778
+(defun working-status-call-processworking-status-call-process308,10958
+(defun working-status (&optional percent &rest args)working-status329,11948
+(defun working-dynamic-status (&optional number &rest args)working-dynamic-status346,12742
+(defun working-message-frame-width ()working-message-frame-width361,13407
+(defun working-percent-display (length percent)working-percent-display374,13842
+(defun working-bar-display (length percent)working-bar-display382,14237
+(defun working-bar-percent-display (length percent)working-bar-percent-display396,14784
+(defun working-percent-bar-display (length percent)working-percent-bar-display410,15365
+(defun working-bubble-display (length percent)working-bubble-display424,15946
+(defun working-bubble-percent-display (length percent)working-bubble-percent-display440,16647
+(defun working-celeron-percent-display (length percent)working-celeron-percent-display454,17228
+(defun working-number-display (length number)working-number-display468,17774
+(defun working-text-display (length text)working-text-display476,18158
+(defun working-spinner-display (length number)working-spinner-display484,18477
+(defun working-dotgrowth-display (length number)working-dotgrowth-display492,18891
+(defun working-frame-animation-display (length number frames)working-frame-animation-display504,19466
+(defvar working-celeron-stringsworking-celeron-strings528,20508
+(defun working-celeron-display (length number)working-celeron-display534,20752
+(defvar working-bounce-stringsworking-bounce-strings545,21236
+(defun working-bounce-display (length number)working-bounce-display561,21498
+(defun working-verify-parenthesis-a ()working-verify-parenthesis-a582,22222
+(defun working-verify-parenthesis-b ()working-verify-parenthesis-b597,22590
+(defun working-wait-for-keypress ()working-wait-for-keypress612,22977
+(defun working-verify-sleep ()working-verify-sleep621,23266
+(defun working-verify-mode-line ()working-verify-mode-line626,23451

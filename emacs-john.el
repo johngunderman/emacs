@@ -70,3 +70,45 @@
 ;; enable the windmove default keybindings.
 ;; shift + {right, left, etc} moves window focus.
 (windmove-default-keybindings)
+
+;; enable icicle- mode by default
+(icy-mode 1)
+
+;; enable iswitchb-mode
+(iswitchb-mode 1)
+
+;; cycle through buffers with Ctrl-Tab (like Firefox)
+(global-set-key (kbd "<C-tab>") 'bury-buffer)
+(global-set-key (kbd "<C-S-iso-lefttab>") 'unbury-buffer)
+
+
+
+;; do not confirm a new file or buffer
+;; (setq confirm-nonexistent-file-or-buffer nil)
+;; (require 'ido)
+;; (ido-mode 1)
+;; (ido-everywhere 1)
+;; (setq ido-enable-flex-matching t)
+;; (setq ido-create-new-buffer 'always)
+;; (setq ido-enable-tramp-completion nil)
+;; (setq ido-enable-last-directory-history nil)
+;; (setq ido-confirm-unique-completion nil) ;; wait for RET, even for unique?
+;; (setq ido-show-dot-for-dired t) ;; put . as the first item
+;; (setq ido-use-filename-at-point t) ;; prefer file names near point
+
+
+;; Set up cedet modes.
+(load-file "~/emacs/cedet/common/cedet.elc")
+(require 'semantic-ia)
+
+(defun my-c-mode-cedet-hook ()
+ ;(local-set-key "." 'semantic-complete-self-insert)
+ ;(local-set-key ">" 'semantic-complete-self-insert)
+ (semantic-load-enable-gaudy-code-helpers)
+ (semantic-load-enable-excessive-code-helpers)
+ (semantic-load-enable-all-exuberent-ctags-support)
+ (global-set-key (kbd "\C-c-") 'senator-fold-tag-toggle))
+(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
+
+
+
