@@ -60,6 +60,14 @@
 (put 'scroll-left 'disabled nil)
 
 
+;; load ghc-mod haskell-mode extension
+(add-to-list 'load-path (expand-file-name "~/emacs/ghc-mod"))
+(autoload 'ghc-init "ghc" nil t)
+(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
+
+
+
+
 ;; org-mode
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link)
@@ -107,8 +115,52 @@
  (semantic-load-enable-gaudy-code-helpers)
  (semantic-load-enable-excessive-code-helpers)
  (semantic-load-enable-all-exuberent-ctags-support)
- (global-set-key (kbd "\C-c-") 'senator-fold-tag-toggle))
+ (global-set-key (kbd "\C-c-") 'senator-fold-tag-toggle)
+ (global-semantic-idle-completions-mode))
 (add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
 
 
 
+
+;; set ourselves some nice keybindings:
+(global-set-key (kbd "<mouse-7>") 'scroll-left)
+(global-set-key (kbd "<mouse-6>") 'scroll-right)
+
+
+;; Load up YAsnippet
+(require 'yasnippet-bundle)
+
+;; Load up our color themes
+;(add-to-list 'load-path (expand-file-name "~/emacs/color-theme"))
+;(require 'color-theme)
+;(color-theme-tango)
+
+
+
+
+
+;; Load up winner mode (redo-undo for window layouts)
+(winner-mode t)
+
+;; Highlight current line
+(global-hl-line-mode 1)
+(set-face-background 'hl-line "#fff")
+
+;; set recent file mode
+;;(recentf-mode 1)
+
+
+;; Include sr-speedbar (inline speedbar)
+;; (require 'sr-speedbar)
+
+
+;; ECB stuff
+;;(add-to-list 'load-path (expand-file-name "~/emacs/ecb-2.40"))
+;;(require 'ecb)
+;;(require 'ecb-autoloads)
+
+(global-set-key (kbd "\C-cj") 'align-regexp)
+
+;; load go-mode stuff
+(add-to-list 'load-path "/home/john/extern-projects/go-lang/misc/emacs/" t)
+(require 'go-mode-load)
