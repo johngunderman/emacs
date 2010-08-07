@@ -36,8 +36,11 @@
 
 
 ;; icicles
-(add-to-list 'load-path (expand-file-name "~/emacs/icicles"))
-(require 'icicles)
+;(add-to-list 'load-path (expand-file-name "~/emacs/icicles"))
+;(require 'icicles)
+
+;; enable icicle- mode by default
+;(icy-mode 1)
 
 
 ;; allow copy-paste with external programs 
@@ -79,30 +82,27 @@
 ;; shift + {right, left, etc} moves window focus.
 (windmove-default-keybindings)
 
-;; enable icicle- mode by default
-(icy-mode 1)
 
 ;; enable iswitchb-mode
-(iswitchb-mode 1)
+;(iswitchb-mode 1)
 
 ;; cycle through buffers with Ctrl-Tab (like Firefox)
 (global-set-key (kbd "<C-tab>") 'bury-buffer)
 (global-set-key (kbd "<C-S-iso-lefttab>") 'unbury-buffer)
 
 
-
 ;; do not confirm a new file or buffer
-;; (setq confirm-nonexistent-file-or-buffer nil)
-;; (require 'ido)
-;; (ido-mode 1)
-;; (ido-everywhere 1)
-;; (setq ido-enable-flex-matching t)
-;; (setq ido-create-new-buffer 'always)
-;; (setq ido-enable-tramp-completion nil)
-;; (setq ido-enable-last-directory-history nil)
-;; (setq ido-confirm-unique-completion nil) ;; wait for RET, even for unique?
-;; (setq ido-show-dot-for-dired t) ;; put . as the first item
-;; (setq ido-use-filename-at-point t) ;; prefer file names near point
+ (setq confirm-nonexistent-file-or-buffer nil)
+ (require 'ido)
+ (ido-mode 1)
+ (ido-everywhere 1)
+ (setq ido-enable-flex-matching t)
+ (setq ido-create-new-buffer 'always)
+ (setq ido-enable-tramp-completion nil)
+ (setq ido-enable-last-directory-history nil)
+ (setq ido-confirm-unique-completion nil) ;; wait for RET, even for unique?
+ (setq ido-show-dot-for-dired t) ;; put . as the first item
+ (setq ido-use-filename-at-point t) ;; prefer file names near point
 
 
 ;; Set up cedet modes.
@@ -162,5 +162,5 @@
 (global-set-key (kbd "\C-cj") 'align-regexp)
 
 ;; load go-mode stuff
-(add-to-list 'load-path "/home/john/extern-projects/go-lang/misc/emacs/" t)
+(add-to-list 'load-path "/home/john/extern-projects/go/misc/emacs/" t)
 (require 'go-mode-load)

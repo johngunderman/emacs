@@ -31,7 +31,7 @@
      (font-lock-type-face ((t (:foreground "#8ae234" :bold t))))
      (font-lock-variable-name-face ((t (:foreground "#eeeeec"))))
      (font-lock-warning-face ((t (:bold t :foreground "#f57900"))))
-     (font-lock-function-name-face ((t (:foreground "#edd400" :bold t :italic t))))
+     (font-lock-function-name-face ((t (:foreground "#edd400" :bold t))))
      (comint-highlight-input ((t (:italic t :bold t))))
      (comint-highlight-prompt ((t (:foreground "#8ae234"))))
      (isearch ((t (:background "#f57900" :foreground "#2e3436"))))
