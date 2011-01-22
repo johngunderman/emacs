@@ -54,7 +54,7 @@
 
 
 ;; load this for Haskell mode
-(add-to-list 'load-path (expand-file-name "~/haskell-mode"))
+(add-to-list 'load-path (expand-file-name "~/emacs/haskell-mode"))
 (load "~/emacs/haskell-mode/haskell-site-file.el")
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
@@ -164,3 +164,7 @@
 ;; load go-mode stuff
 (add-to-list 'load-path "/home/john/extern-projects/go/misc/emacs/" t)
 (require 'go-mode-load)
+
+;; add magit stuff
+(add-to-list 'load-path "~/emacs/magit/" t)
+(require 'magit)
