@@ -96,14 +96,13 @@
  (require 'ido)
  (ido-mode 1)
  (ido-everywhere 1)
- (setq ido-enable-flex-matching t)
  (setq ido-create-new-buffer 'always)
  (setq ido-enable-tramp-completion nil)
  (setq ido-enable-last-directory-history nil)
  (setq ido-confirm-unique-completion nil) ;; wait for RET, even for unique?
  (setq ido-show-dot-for-dired t) ;; put . as the first item
  (setq ido-use-filename-at-point t) ;; prefer file names near point
-
+ (setq ido-enable-flex-matching t)
 
 ;; Set up cedet modes.
 (load-file "~/emacs/cedet/common/cedet.elc")
@@ -168,3 +167,17 @@
 ;; add magit stuff
 (add-to-list 'load-path "~/emacs/magit/" t)
 (require 'magit)
+
+;; Use hippie-expand instead of dabbrev
+(global-set-key [(meta /)] (make-hippie-expand-function
+			    '(try-complete-file-name-partially
+			      try-complete-file-name
+			      try-expand-all-abbrevs
+			      try-expand-list
+			      try-expand-line
+			      try-expand-dabbrev
+			      try-expand-dabbrev-all-buffers
+			      try-expand-dabbrev-from-kill
+			      try-complete-lisp-symbol-partially
+			      try-complete-lisp-symbol) t))
+
