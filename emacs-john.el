@@ -10,6 +10,7 @@
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
  '(transient-mark-mode t)
+ '(c-basic-offset 4)
 )
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
