@@ -11,6 +11,7 @@
  '(inhibit-startup-screen t)
  '(transient-mark-mode t)
  '(c-basic-offset 4)
+ '(indent-tabs-mode nil)
 )
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
