@@ -24,6 +24,9 @@
 ;; start emacsclient server at startup
 (server-start)
 
+(put 'narrow-to-region 'disabled nil)
+
+(put 'upcase-region 'disabled nil)
 
 
 ;; auto-install script
