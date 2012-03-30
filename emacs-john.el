@@ -48,7 +48,7 @@
 ;(icy-mode 1)
 
 
-;; allow copy-paste with external programs 
+;; allow copy-paste with external programs
 (setq x-select-enable-clipboard t)
 
 (tool-bar-mode -1) ;turn off the toolbar.
@@ -72,15 +72,6 @@
 (add-to-list 'load-path (expand-file-name "~/emacs/ghc-mod"))
 (autoload 'ghc-init "ghc" nil t)
 (add-hook 'haskell-mode-hook (lambda () (ghc-init)))
-
-
-
-
-;; org-mode
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
 
 
 ;; enable the windmove default keybindings.
@@ -189,18 +180,18 @@
 
 ;; Use hippie-expand instead of dabbrev
 (global-set-key [(meta /)] (make-hippie-expand-function
-			    '(try-complete-file-name-partially
-			      try-complete-file-name
-			      try-expand-all-abbrevs
-			      try-expand-list
-			      try-expand-line
-			      try-expand-dabbrev
-			      try-expand-dabbrev-all-buffers
-			      try-expand-dabbrev-from-kill
-			      try-complete-lisp-symbol-partially
-			      try-complete-lisp-symbol) t))
+                            '(try-complete-file-name-partially
+                              try-complete-file-name
+                              try-expand-all-abbrevs
+                              try-expand-list
+                              try-expand-line
+                              try-expand-dabbrev
+                              try-expand-dabbrev-all-buffers
+                              try-expand-dabbrev-from-kill
+                              try-complete-lisp-symbol-partially
+                              try-complete-lisp-symbol) t))
 
-(set-default-font "-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*")
+(set-default-font "-*-terminus-*-*-*-*-14-*-*-*-*-*-*-*")
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -210,7 +201,7 @@
  '(default ((t (:inherit nil :stipple nil :background "DarkSlateGray"
                          :foreground "Wheat" :inverse-video nil :box nil :strike-through nil
                          :overline
-                         
+
                          (custom-set-faces
                           '(my-tab-face            ((((class color)) (:background "#306060"))) t))
                          (add-hook 'font-lock-mode-hook
@@ -220,5 +211,22 @@
                                             (append font-lock-keywords
                                                     '(("\t+" (0 'my-tab-face t))))))))
                          )))))
-                         
-                        
+
+
+;; some org-mode stuff
+
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(define-key global-map "\C-c'" 'org-cycle-agenda-files)
+(setq org-log-done t)
+
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "STARTED(s)" "WAIT(w)" "|" "DONE(d)" "CANCELED(c!)")))
+
+(setq org-todo-keyword-faces
+      '(("TODO" . org-warning) ("STARTED" . (:foreground "green" :weight bold))
+        ("DONE" . (:foreground "purple" :weight bold))
+        ("WAIT" . (:foreground "red" :weight bold)) ("CANCELED" . (:foreground "blue" :weight bold))))
+
+(add-to-list 'org-agenda-files "~/Dropbox/org/" t)
