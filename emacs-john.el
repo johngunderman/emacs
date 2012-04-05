@@ -28,6 +28,7 @@
 
 (put 'upcase-region 'disabled nil)
 
+(setq tramp-default-method "ssh")
 
 ;; auto-install script
 (add-to-list 'load-path (expand-file-name "~/elisp"))
@@ -97,7 +98,6 @@
  (setq ido-enable-last-directory-history nil)
  (setq ido-confirm-unique-completion nil) ;; wait for RET, even for unique?
  (setq ido-show-dot-for-dired t) ;; put . as the first item
- (setq ido-use-filename-at-point t) ;; prefer file names near point
  (setq ido-enable-flex-matching t)
 
 ;; Set up cedet modes.
@@ -157,8 +157,8 @@
 (global-set-key (kbd "\C-cj") 'align-regexp)
 
 ;; load go-mode stuff
-(add-to-list 'load-path "/home/john/extern-projects/go/misc/emacs/" t)
-(require 'go-mode-load)
+;; (add-to-list 'load-path "/home/john/extern-projects/go/misc/emacs/" t)
+;; (require 'go-mode-load)
 
 ;; add magit stuff
 (add-to-list 'load-path "~/emacs/magit/" t)
@@ -180,16 +180,16 @@
 
 ;; Use hippie-expand instead of dabbrev
 (global-set-key [(meta /)] (make-hippie-expand-function
-                            '(try-complete-file-name-partially
-                              try-complete-file-name
-                              try-expand-all-abbrevs
-                              try-expand-list
-                              try-expand-line
-                              try-expand-dabbrev
-                              try-expand-dabbrev-all-buffers
-                              try-expand-dabbrev-from-kill
-                              try-complete-lisp-symbol-partially
-                              try-complete-lisp-symbol) t))
+			    '(try-complete-file-name-partially
+			      try-complete-file-name
+			      try-expand-all-abbrevs
+			      try-expand-list
+			      try-expand-line
+			      try-expand-dabbrev
+			      try-expand-dabbrev-all-buffers
+			      try-expand-dabbrev-from-kill
+			      try-complete-lisp-symbol-partially
+			      try-complete-lisp-symbol) t))
 
 (set-default-font "-*-terminus-*-*-*-*-14-*-*-*-*-*-*-*")
 
