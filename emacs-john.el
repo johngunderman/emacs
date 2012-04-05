@@ -229,4 +229,5 @@
         ("DONE" . (:foreground "purple" :weight bold))
         ("WAIT" . (:foreground "red" :weight bold)) ("CANCELED" . (:foreground "blue" :weight bold))))
 
+(setq org-agenda-files '())
 (add-to-list 'org-agenda-files "~/Dropbox/org/" t)
