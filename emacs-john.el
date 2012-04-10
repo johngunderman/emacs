@@ -231,3 +231,8 @@
 
 (setq org-agenda-files '())
 (add-to-list 'org-agenda-files "~/Dropbox/org/" t)
+
+
+;; Set some nice key mappings
+(define-key global-map "\C-cr" 'revert-buffer)
+(define-key global-map "\C-cw" 'whitespace-cleanup)
