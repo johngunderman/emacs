@@ -236,3 +236,5 @@
 ;; Set some nice key mappings
 (define-key global-map "\C-cr" 'revert-buffer)
 (define-key global-map "\C-cw" 'whitespace-cleanup)
+
+(require 'jinja)
