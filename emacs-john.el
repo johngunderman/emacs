@@ -238,3 +238,5 @@
 (define-key global-map "\C-cw" 'whitespace-cleanup)
 
 (require 'jinja)
+
+(setq scheme-program-name "racket")
