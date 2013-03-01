@@ -240,3 +240,6 @@
 (require 'jinja)
 
 (setq scheme-program-name "racket")
+
+(require 'hungry-delete)
+(global-hungry-delete-mode)
