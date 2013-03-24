@@ -243,3 +243,5 @@
 
 (require 'hungry-delete)
 (global-hungry-delete-mode)
+
+(require 'go-mode)
